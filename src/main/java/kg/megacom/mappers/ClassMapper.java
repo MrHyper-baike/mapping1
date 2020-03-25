@@ -13,9 +13,9 @@ public interface ClassMapper {
     ClassMapper INSTANCE= Mappers.getMapper(ClassMapper.class);
     @Mappings({
             @Mapping(source = "id", target = "cityId"),
-            @Mapping(source = "id", target = "houseId"),
             @Mapping(source = "name", target = "cityName"),
-            @Mapping(source = "name", target = "houseName"),
+            @Mapping(source = "id", target = "houseId"),
+            @Mapping(source = "name", target = "houseName")
     })
     CityHouse cityAndHouseToCytyDto (City city, House house);
 
