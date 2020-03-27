@@ -12,11 +12,10 @@ import org.mapstruct.factory.Mappers;
 public interface ClassMapper {
     ClassMapper INSTANCE= Mappers.getMapper(ClassMapper.class);
     @Mappings({
-            @Mapping(source = "id", target = "cityId"),
-            @Mapping(source = "name", target = "cityName"),
-            @Mapping(source = "id", target = "houseId"),
-            @Mapping(source = "name", target = "houseName")
+            @Mapping(source = "City.id", target = "cityId"),
+            @Mapping(source = "City.name", target = "cityName"),
+            @Mapping(source = "House.id", target = "houseId"),
+            @Mapping(source = "House.name", target = "houseName")
     })
     CityHouse cityAndHouseToCytyDto (City city, House house);
-
 }
